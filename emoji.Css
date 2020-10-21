@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 190, 166);
+    min-height: 100vh;
+    cursor: url('virus6.png'), pointer;
+}
+
+.face{
+    position: relative;
+    width: 300;
+    height: 300;
+    border-radius: 50%;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background-color:peru;
+    border-bottom-left-radius: 70px ;
+    border-bottom-right-radius: 70px ;
+    transition: 0.5s;
+}
+.face:hover{
+    background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.face:hover::before{
+
+    top: 210px;
+    width: 150px;
+    height: 20px;
+    border-top-left-radius: 360%;
+    border-top-right-radius: 360%;   
+    background-color: rgb(0, 0, 0);
+
+}
+
+.eyes{
+    position: relative;
+    top: -40px;
+    display: flex;
+
+}
+.eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: white;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute; 
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+
+
+}
